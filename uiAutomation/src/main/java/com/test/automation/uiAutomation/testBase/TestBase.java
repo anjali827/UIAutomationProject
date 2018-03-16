@@ -3,8 +3,11 @@ package com.test.automation.uiAutomation.testBase;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.test.automation.uiAutomation.excelReader.Excel_Reader;
 
@@ -44,4 +47,13 @@ public class TestBase {
 	       String[][] data = excel.getDataFromSheet(sheetName, excelName);
 					return data;
 				}
+	
+	public void waitForElement(WebDriver driver, int timeOutInSeconds, WebElement element){
+		WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
+		wait.until(ExpectedConditions.visibilityOf(element));
+	}
+	
+	public void closeBrowser(){
+		driver.quit();
+	}
 }
