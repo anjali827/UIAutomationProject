@@ -1,5 +1,8 @@
 package com.test.automation.uiAutomation.homePage;
 
+import java.io.IOException;
+
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -14,21 +17,27 @@ public class TC_003_VerifyLoginWithDifferentRecords extends TestBase{
 
 	@DataProvider(name = "loginData")	
 	public String[][] getTestData(){
-		String[][] testRecord = getData("TestData.xlsx", "loginData");
+		String[][] testRecord = getData("SeleniumAutomationData.xlsx", "loginData");
 		return testRecord;
 	}
 	
 	
 	@BeforeClass
-	public void setup(){
+	public void setup() throws IOException{
 		init();
+		homepage = new HomePage(driver);
 	}
 	
 	@Test(dataProvider = "loginData")
-	public void testLogin(String emailAddress, String password, String runmode){
+	public void testLogin(String emailAddress, String password, String runmode) throws IOException{
 		homepage = new HomePage(driver);
 		homepage.loginToApplication(emailAddress, password);
-		homepage.logOutOfApplication();
+		boolean status = homepage.verifyLogOutDisplay();
+		if(status = true){
+			homepage.logOutOfApplication();	
+		}
+		Assert.assertEquals(status, true);
+		getScreenshot("verifyLoginWithDifferentRecords");
 	}
 		
 	@AfterTest

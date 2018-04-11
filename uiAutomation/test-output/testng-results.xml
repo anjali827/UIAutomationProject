@@ -1,168 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
+    <line>
+      <![CDATA[<a href = 'C:\Users\abc\git\MyLocalGit\uiAutomation\src\main\java\com\test\automation\uiAutomation\screenshot\FailureScreenshots\verifyLoginWithInvalidCredentials_25_03_2018_05_37_48.png'><img src ='C:\Users\abc\git\MyLocalGit\uiAutomation\src\main\java\com\test\automation\uiAutomation\screenshot\FailureScreenshots\verifyLoginWithInvalidCredentials_25_03_2018_05_37_48.png' height = '100px' width = '100px'/></a> ]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="221227" started-at="2018-03-07T07:31:11Z" finished-at="2018-03-07T07:34:53Z">
+  <suite name="Regression Suite" duration-ms="93610" started-at="2018-03-25T12:06:15Z" finished-at="2018-03-25T12:07:49Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="221227" started-at="2018-03-07T07:31:11Z" finished-at="2018-03-07T07:34:53Z">
-      <class name="com.test.automation.uiAutomation.homePage.TC_003_VerifyLoginWithDifferentRecords">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.test.automation.uiAutomation.homePage.TC_003_VerifyLoginWithDifferentRecords@2d45ba]" name="setup" is-config="true" duration-ms="44088" started-at="2018-03-07T13:01:11Z" finished-at="2018-03-07T13:01:55Z">
+    <test name="Test" duration-ms="93610" started-at="2018-03-25T12:06:15Z" finished-at="2018-03-25T12:07:49Z">
+      <class name="com.test.automation.uiAutomation.homePage.TC001_VerifyLoginWithInvalidCredentials">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.test.automation.uiAutomation.homePage.TC001_VerifyLoginWithInvalidCredentials@17e2f02]" name="setup" is-config="true" duration-ms="32237" started-at="2018-03-25T17:36:15Z" finished-at="2018-03-25T17:36:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.test.automation.uiAutomation.homePage.TC_003_VerifyLoginWithDifferentRecords@2d45ba]" name="testLogin" duration-ms="20909" started-at="2018-03-07T13:01:59Z" data-provider="loginData" finished-at="2018-03-07T13:02:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[automate@test.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[password]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[y]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="FAIL" signature="verifyLoginWithInvalidCredentials()[pri:0, instance:com.test.automation.uiAutomation.homePage.TC001_VerifyLoginWithInvalidCredentials@17e2f02]" name="verifyLoginWithInvalidCredentials" duration-ms="60427" started-at="2018-03-25T17:36:47Z" finished-at="2018-03-25T17:37:48Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"xpath","selector":".//*[@id='header']/div[2]/div/div/nav/div[1]/a"}
+Command duration or timeout: 60.21 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'abc-PC', ip: '127.0.0.1', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 780e4622-4dae-408b-9375-1a67f05df076
+*** Element info: {Using=xpath, value=.//*[@id='header']/div[2]/div/div/nav/div[1]/a}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":".//*[@id='header']/div[2]/div/div/nav/div[1]/a"}
+Command duration or timeout: 60.21 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'abc-PC', ip: '127.0.0.1', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 780e4622-4dae-408b-9375-1a67f05df076
+*** Element info: {Using=xpath, value=.//*[@id='header']/div[2]/div/div/nav/div[1]/a}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy7.click(Unknown Source)
+	at com.test.automation.uiAutomation.uiActions.HomePage.loginToApplication(HomePage.java:48)
+	at com.test.automation.uiAutomation.homePage.TC001_VerifyLoginWithInvalidCredentials.verifyLoginWithInvalidCredentials(TC001_VerifyLoginWithInvalidCredentials.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":".//*[@id='header']/div[2]/div/div/nav/div[1]/a"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'abc-PC', ip: '127.0.0.1', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_161'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/abc/AppData/Local/Temp/anonymous7810479861076563652webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/abc/AppData/Local/Temp/anonymous7810479861076563652webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
+            <line>
+              <![CDATA[<a href = 'C:\Users\abc\git\MyLocalGit\uiAutomation\src\main\java\com\test\automation\uiAutomation\screenshot\FailureScreenshots\verifyLoginWithInvalidCredentials_25_03_2018_05_37_48.png'><img src ='C:\Users\abc\git\MyLocalGit\uiAutomation\src\main\java\com\test\automation\uiAutomation\screenshot\FailureScreenshots\verifyLoginWithInvalidCredentials_25_03_2018_05_37_48.png' height = '100px' width = '100px'/></a> ]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.test.automation.uiAutomation.homePage.TC_003_VerifyLoginWithDifferentRecords@2d45ba]" name="testLogin" duration-ms="26438" started-at="2018-03-07T13:02:20Z" data-provider="loginData" finished-at="2018-03-07T13:02:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[automate@test.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[password]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[y]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.test.automation.uiAutomation.homePage.TC_003_VerifyLoginWithDifferentRecords@2d45ba]" name="testLogin" duration-ms="24604" started-at="2018-03-07T13:02:46Z" data-provider="loginData" finished-at="2018-03-07T13:03:11Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[automate@test.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[password]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[y]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.test.automation.uiAutomation.homePage.TC_003_VerifyLoginWithDifferentRecords@2d45ba]" name="testLogin" duration-ms="23551" started-at="2018-03-07T13:03:11Z" data-provider="loginData" finished-at="2018-03-07T13:03:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[automate@test.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[password]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[y]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.test.automation.uiAutomation.homePage.TC_003_VerifyLoginWithDifferentRecords@2d45ba]" name="testLogin" duration-ms="23819" started-at="2018-03-07T13:03:34Z" data-provider="loginData" finished-at="2018-03-07T13:03:58Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[automate@test.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[password]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[y]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.test.automation.uiAutomation.homePage.TC_003_VerifyLoginWithDifferentRecords@2d45ba]" name="testLogin" duration-ms="24243" started-at="2018-03-07T13:03:58Z" data-provider="loginData" finished-at="2018-03-07T13:04:22Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[automate@test.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[password]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[y]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.test.automation.uiAutomation.homePage.TC_003_VerifyLoginWithDifferentRecords@2d45ba]" name="testLogin" duration-ms="23239" started-at="2018-03-07T13:04:22Z" data-provider="loginData" finished-at="2018-03-07T13:04:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[automate@test.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[password]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[y]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:com.test.automation.uiAutomation.homePage.TC_003_VerifyLoginWithDifferentRecords@2d45ba]" name="endTest" is-config="true" duration-ms="7006" started-at="2018-03-07T13:04:46Z" finished-at="2018-03-07T13:04:53Z">
+        </test-method> <!-- verifyLoginWithInvalidCredentials -->
+        <test-method status="PASS" signature="endTest()[pri:0, instance:com.test.automation.uiAutomation.homePage.TC001_VerifyLoginWithInvalidCredentials@17e2f02]" name="endTest" is-config="true" duration-ms="93" started-at="2018-03-25T17:37:49Z" finished-at="2018-03-25T17:37:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
-      </class> <!-- com.test.automation.uiAutomation.homePage.TC_003_VerifyLoginWithDifferentRecords -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.test.automation.uiAutomation.homePage.TC001_VerifyLoginWithInvalidCredentials -->
+    </test> <!-- Test -->
+  </suite> <!-- Regression Suite -->
 </testng-results>

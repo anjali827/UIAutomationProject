@@ -3,7 +3,6 @@ package com.test.automation.uiAutomation.uiActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.test.automation.uiAutomation.testBase.TestBase;

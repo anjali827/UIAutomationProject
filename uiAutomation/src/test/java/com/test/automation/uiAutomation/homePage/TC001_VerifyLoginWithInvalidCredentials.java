@@ -3,10 +3,13 @@ package com.test.automation.uiAutomation.homePage;
 /*import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;*/
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.testng.log4testng.Logger;
 
 import com.test.automation.uiAutomation.testBase.TestBase;
 import com.test.automation.uiAutomation.uiActions.HomePage;
@@ -15,9 +18,10 @@ public class TC001_VerifyLoginWithInvalidCredentials extends TestBase {
 	 
 	//WebDriver driver; --initialization done in TestBase class
 	HomePage homepage;
+	//static Logger log = Logger.getLogger(TC001_VerifyLoginWithInvalidCredentials.class.getName());
 	
 	@BeforeTest
-	public void setup(){
+	public void setup() throws IOException{
 		/*driver = new FirefoxDriver();
 		driver.get("http://automationpractice.com/index.php");*/ 
 		init(); //TestBase method 
@@ -31,7 +35,7 @@ public class TC001_VerifyLoginWithInvalidCredentials extends TestBase {
 		//Assert.assertEquals(driver.findElement(By.xpath(".//*[@id='center_column']/div[1]/ol/li")).getText(), "Authentication failed.");*/
 		homepage = new HomePage(driver);
 		homepage.loginToApplication("test@gmail.com", "password123");
-		Assert.assertEquals(homepage.getInvalidLoginText(), "Authentication failed.");
+		Assert.assertEquals(homepage.getInvalidLoginText(), "Athentication failed.");
 	}
 	@AfterClass
 	public void endTest(){

@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 
 public class HomePage {
 
@@ -39,7 +38,7 @@ public class HomePage {
 	
 	@FindBy(xpath = ".//*[@id='header']/div[2]/div/div/nav/div[2]/a")
 	WebElement signOut;
-	
+		
 	public HomePage(WebDriver driver){
 		this.driver = driver;
 		PageFactory.initElements(driver, this); //initElement initialize all WebsElements mentioned above
@@ -61,6 +60,11 @@ public class HomePage {
 		enterEmail.sendKeys(emailAddress);
 		createAccountBtn.click();
 		}
+	
+	public boolean verifyLogOutDisplay(){
+		signOut.isDisplayed();
+		return true;
+	}
 	
 	public String getNextStepText(){
 		return nextStepRegistration.getText();
