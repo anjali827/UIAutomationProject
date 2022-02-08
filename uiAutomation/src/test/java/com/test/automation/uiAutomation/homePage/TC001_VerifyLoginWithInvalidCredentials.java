@@ -40,7 +40,8 @@ public class TC001_VerifyLoginWithInvalidCredentials extends TestBase {
 	@AfterClass
 	public void endTest(){
 
-		driver.close();
+		//driver.close();
+		driver.quit();
 	}
 	
 }
